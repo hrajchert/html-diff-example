@@ -30,6 +30,15 @@ function createClassNameHeuristics (element: HTMLElement) {
     };
 }
 
+function createTitleHeuristics (element: HTMLElement) {
+    const query = `a[title="${element.title}"]`;
+
+    return function (document: Document) {
+        return document.querySelector(query);
+    };
+
+}
+
 class OriginalElementNotFound {
     constructor (private id: string) {
 
@@ -48,7 +57,8 @@ function createHeuristics (html: JSDOM) {
     const element = document.getElementById(originalElementId);
     if (element) {
         return Task.resolve([
-            createClassNameHeuristics(element)
+            createClassNameHeuristics(element),
+            createTitleHeuristics(element)
         ]);
 
     } else {
