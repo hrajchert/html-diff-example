@@ -1,5 +1,5 @@
 {
-  "name": "ae",
+  "name": "html-diff-example",
   "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
@@ -26,13 +26,17 @@
     "contributors-generate": "all-contributors generate"
   },
   "dependencies": {
+    "@ts-task/fs": "^1.0.1",
+    "@ts-task/task": "^1.0.1",
+    "@types/jsdom": "^12.2.1",
+    "jsdom": "^13.1.0",
     "tsns": "0.0.18",
     "typescript": "3.0.1"
   },
   "devDependencies": {
     "@types/chai": "4.1.4",
     "@types/mocha": "5.2.5",
-    "@types/node": "10.5.7",
+    "@types/node": "^10.12.18",
     "all-contributors-cli": "5.4.0",
     "chai": "4.1.2",
     "husky": "0.14.3",
